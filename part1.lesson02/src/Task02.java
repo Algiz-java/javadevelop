@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class task02 {
+public class Task02 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
             System.out.print("Введите вашу ЗП до вычета налога НДФЛ: ");
