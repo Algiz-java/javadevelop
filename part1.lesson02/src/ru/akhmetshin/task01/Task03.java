@@ -1,3 +1,5 @@
+package ru.akhmetshin.task01;
+
 import java.util.Scanner;
 
 public class Task03 {
