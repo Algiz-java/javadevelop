@@ -1,4 +1,4 @@
-package ru.akhmetshin.task01;
+package ru.akhmetshin.lesson02;
 
 import java.util.Scanner;
 
