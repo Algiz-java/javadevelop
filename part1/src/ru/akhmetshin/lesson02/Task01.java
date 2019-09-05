@@ -13,24 +13,24 @@ public class Task01 {
                 System.out.println("Превышено количество попыток ввода, конец программы");
                 System.exit(0);
             }
-            if (num != 80 & num != 92 & num != 95 & count < 2) {
+            if (num != 80 & num != 92 & num != 95) {
                 System.out.println("Неправильный ввод, введите 80, 92 или 95");
                 count = count + 1;
             }
             if (num == 80 | num == 92 | num == 95) {
                 System.out.print("Введите количество литров - ");
                 int val = in.nextInt(); //Количество литров
-                float a = 40.35f, b = 43.51f, c = 45.62f, x; //объявление переменных с ценой и конечная стоимость
+                float A = 40.35f, B = 43.51f, C = 45.62f, x; //объявление переменных с ценой и конечная стоимость
                 if (num == 80) {
-                    x = a * val;
+                    x = A * val;
                     System.out.println("Стоимость бензина = " + x + " руб.");
                 }
                 if (num == 92) {
-                    x = b * val;
+                    x = B * val;
                     System.out.println("Стоимость бензина = " + x + " руб.");
                 }
                 if (num == 95) {
-                    x = c * val;
+                    x = C * val;
                     System.out.println("Стоимость бензина = " + x + " руб.");
                 }
                 count = 4;
