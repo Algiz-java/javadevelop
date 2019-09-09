@@ -15,7 +15,7 @@ public class GameHotCold {
             int y = in.nextInt();
             int diff = x - y;
             if (x == y){
-                System.out.println("Конец игры, загаданное число: " + x);
+                System.out.println("Ты угадал! Загаданным числом было: " + x);
                 System.exit(0);
             }
             if (Math.abs(diff) <= 10) {
