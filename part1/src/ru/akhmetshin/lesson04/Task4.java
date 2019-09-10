@@ -10,10 +10,10 @@ public class Task4 {
         System.out.print("Введите начальное число, знаменатель прогресси и количество чисел:");
         Scanner in = new Scanner(System.in);
         PrintStream out = System.out;
-        int c=in.nextInt();
-        int b=in.nextInt();
+        double c=in.nextInt();
+        double b=in.nextInt();
         int x=in.nextInt();
-        int[] a = new int[x];
+        double[] a = new double[x];
         System.out.println(ANSI_YELLOW + "Арифметическая прогрессия числа " + c + " с знаменателем " + b + ANSI_RESET);
         for (int i=0; i<a.length; i++){
             a[i]= c + b * i;
