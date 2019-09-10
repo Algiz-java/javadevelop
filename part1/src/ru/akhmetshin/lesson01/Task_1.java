@@ -1,6 +1,5 @@
 package ru.akhmetshin.lesson01;
 
-import java.util.Scanner;
 
 public class Task_1 {
     public static void main(String[] args) {
