@@ -10,20 +10,20 @@ public class Task2 {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите любое число: ");
         NumberFormat nf_in = NumberFormat.getNumberInstance(Locale.ENGLISH);
-        double z = nf_in.parse(in.next()).doubleValue();
+        double x = nf_in.parse(in.next()).doubleValue();
         System.out.print("Это число: ");
-        if (z == 0){System.out.print("нулевое."); System.exit(0);}
+        if (x == 0){System.out.print("нулевое."); System.exit(0);}
 
-        if (z < 0){System.out.print("отрицательное, ");} else System.out.print("положительное, ");
+        if (x < 0){System.out.print("отрицательное, ");} else System.out.print("положительное, ");
 
-        if ((z - Math.floor(z)) == 0){
+        if ((x - Math.floor(x)) == 0){
             System.out.print("целое, ");
-            if ((z % 2) == 0){
+            if ((x % 2) == 0){
                 System.out.print("четное.");
             }else System.out.print("нечетное.");
         }
 
-        if ((z - Math.floor(z)) > 0){
+        if ((x - Math.floor(x)) > 0){
             System.out.print("дробное.");
         }
     }
