@@ -9,7 +9,6 @@ public class Task4 {
     public static void main(String[] args) {
         System.out.print("Введите начальное число, знаменатель прогресси и количество чисел:");
         Scanner in = new Scanner(System.in);
-        PrintStream out = System.out;
         double c=in.nextInt();
         double b=in.nextInt();
         int x=in.nextInt();
