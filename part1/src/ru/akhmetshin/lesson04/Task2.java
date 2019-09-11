@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Locale;
 
 public class Task2 {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) throws ParseException { //не совсем понятно пока что это, IDE добавил сам код
         Scanner in = new Scanner(System.in);
         System.out.print("Введите любое число: ");
         NumberFormat nf_in = NumberFormat.getNumberInstance(Locale.ENGLISH);
