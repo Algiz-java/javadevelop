@@ -14,7 +14,8 @@ public class Task2 {
         System.out.print("Это число: ");
         if (x == 0){System.out.print("нулевое."); System.exit(0);}
 
-        if (x < 0){System.out.print("отрицательное, ");} else System.out.print("положительное, ");
+        //if (x < 0){System.out.print("отрицательное, ");} else System.out.print("положительное, ");
+        System.out.print((x < 0) ? "отрицательное, " : "положительное, ");
 
         if ((x - Math.floor(x)) == 0){
             System.out.print("целое, ");
