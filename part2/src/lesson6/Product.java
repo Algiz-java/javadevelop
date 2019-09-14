@@ -10,7 +10,7 @@ class Product {
 
     void PrintPrice() {
         //System.out.format("%5s",name + ": " + "\t" + "на складе " + val + "\t" + " продано " + quant + "\t" + " прибыль за день " + z + " руб. " + "\t");
-        System.out.format("%-10s", name + " "); //+ "\t" + "на складе " + val + "\t" + " продано " + quant + "\t" + " прибыль за день " + z + " руб. " + "\t");
+        System.out.format("%-9s", name); //+ "\t" + "на складе " + val + "\t" + " продано " + quant + "\t" + " прибыль за день " + z + " руб. " + "\t");
         System.out.printf("%-14s", "|на складе " + val);
         System.out.printf("%-10s", " |продано " + quant );
         System.out.printf("%-30s", " |прибыль за день " + z + " руб. ");
