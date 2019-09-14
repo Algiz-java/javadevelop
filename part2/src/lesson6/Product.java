@@ -5,7 +5,7 @@ package lesson6;
 class Product {
     float z;
     String name;
-    int val; //наличие на складе, продано в шт.
+    int val;    //наличие на складе, продано в шт.
     int quant; //продано за день
 
     void PrintPrice() {
