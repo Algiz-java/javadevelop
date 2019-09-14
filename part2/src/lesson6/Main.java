@@ -25,6 +25,6 @@ public class Main {
             product.diff();
             itogo += buy.sums;
         }
-        System.out.printf("Общая прибыль: %s руб.%n", itogo);
+        System.out.printf("Общая прибыль: %s руб.", itogo);
     }
 }
