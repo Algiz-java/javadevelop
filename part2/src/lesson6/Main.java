@@ -7,7 +7,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        float itog = 0;
+        float itogo = 0;
         String timeStamp = new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime());
         System.out.println("Отчет за "+ timeStamp + ":");
         for (int i = 0; i < 5; i++) { //вывод 5 товаров с применением принципов ООП
@@ -23,8 +23,8 @@ public class Main {
             product.z = buy.sums;
             product.PrintPrice();
             product.diff();
-            itog += buy.sums;
+            itogo += buy.sums;
         }
-        System.out.printf("Общая прибыль: %s руб.%n", itog);
+        System.out.printf("Общая прибыль: %s руб.%n", itogo);
     }
 }
