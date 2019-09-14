@@ -9,7 +9,7 @@ class Product {
     int quant; //продано за день
 
     void PrintPrice() {
-        System.out.print(name +": " + "\t" + "на складе " + val + "\t" + " продано " + quant + "\t"
+        System.out.print(name + ": " + "\t" + "на складе " + val + "\t" + " продано " + quant + "\t"
                 + " прибыль за день " + z + " руб. " + "\t");
     }
 
