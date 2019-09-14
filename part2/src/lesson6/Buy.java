@@ -1,9 +1,10 @@
 package lesson6;
 
 class Buy {
-    int x, sums, z;
+    float sums;
+    int  z;
     void check() {
-        sums = x * z;
+        float x = 48.53f; //цена товара за 1 шт.
+        sums = x * z; //прибыль по товару за день
     }
 }
-

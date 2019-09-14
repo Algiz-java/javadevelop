@@ -1,22 +1,27 @@
 package lesson6;
 
-import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        Product product = new Product();
-        Buy price = new Buy();
-        System.out.print("Введите название продукта: ");
-        product.name = in.next();
-        System.out.print("Введите количество: ");
-        product.quant = in.nextInt();
-        System.out.print("Введите цену: ");
-        price.x = in.nextInt();
-        price.z = product.quant;
-        price.check();
-        product.PrintPrice();
-        System.out.println(price.sums + " руб.");
+        String timeStamp = new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime());
+        System.out.println("Отчет за "+ timeStamp + ":");
+        for (int i = 0; i < 5; i++) {
+            Product product = new Product();
+            Buy price = new Buy();
+            Tovar object = new Tovar();
+            Random random = new Random();
+            product.name = object.ObjectName;
+            product.val = random.nextInt(500);
+            product.quant = random.nextInt(10);
+            price.z = product.quant;
+            price.check();
+            product.z = price.sums;
+            product.PrintPrice();
+            product.diff();
+        }
     }
 }
