@@ -4,9 +4,15 @@ package lesson6;
 
 class Product {
     float z;
-    String name;
-    int val;    //наличие на складе, продано в шт.
+    private String name;
+    private int val;    //наличие на складе, продано в шт.
     int quant; //продано за день
+
+    Product(String name, int val, int quant) {
+        this.name = name;
+        this.val = val;
+        this.quant = quant;
+    }
 
     void PrintPrice() {
         System.out.format("%-9s", name);
