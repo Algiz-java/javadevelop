@@ -7,6 +7,6 @@ public class Main {
         Cost cost;
         cost = new Cost();
         cost.printTable();
-        System.out.println("Total sum " + String.format("%.2f",cost.sumOfCost()));
+        System.out.println("Total sum " + String.format("%.2f",cost.sumOfCost()) + " rub.");
     }
 }
