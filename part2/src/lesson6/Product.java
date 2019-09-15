@@ -2,16 +2,18 @@ package lesson6;
 
 
 class Product {
-    private float price;
-    private float value;
+    float price;
+    float value;
+    String name;
 
     Product(String name, float price, float value) {
         this.price = price;
         this.value = value;
+        this.name = name;
     }
 
     float getSum() {
-        float sum;
-        return sum = price * value;
+        return price * value;
     }
+
 }

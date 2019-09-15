@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Cost cost;
         cost = new Cost();
-        System.out.println("Сумма " + cost.sumOfCost());
         cost.printTable();
+        System.out.println("Total sum " + String.format("%.2f",cost.sumOfCost()));
     }
 }
