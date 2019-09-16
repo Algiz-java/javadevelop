@@ -36,7 +36,7 @@ class Coffee {
         }
     }
     void check() {
-        int i, j , k ;
+        int i = 0, j = 0, k = 0;
         String selectUp = select.toUpperCase();
         switch (selectUp){
             case "A1":i = 1; j = 1; k = 0;
@@ -59,7 +59,7 @@ class Coffee {
                 break;
             default:
                 System.out.println("Введен не правильный формат");
-                return;
+                break;
         }
             System.out.println("Вы выбрали " + sortCoffee[i][j] + " стоимостью " + priceCoffee[k] + " руб.");
             System.out.print("Внесите требуемую сумму:");/*почему в консоли указатель ввода значения встает слева
