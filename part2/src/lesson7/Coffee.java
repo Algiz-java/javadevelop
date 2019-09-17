@@ -7,7 +7,6 @@ class Coffee {
     String select;
     private Scanner in = new Scanner(System.in);
     private int[] priceCoffee = {50,48,11,55,56,78,45,40,30};
-    int z = 0;
 
     void getSortCoffee() {
         sortCoffee[0][0] = "\t";
@@ -36,7 +35,9 @@ class Coffee {
         }
     }
     void check() {
-        int i = 0, j = 0, k = 0;
+        int i;
+        int j;
+        int k;
         String selectUp = select.toUpperCase();
         switch (selectUp){
             case "A1":i = 1; j = 1; k = 0;
@@ -64,7 +65,6 @@ class Coffee {
             System.out.println("Вы выбрали " + sortCoffee[i][j] + " стоимостью " + priceCoffee[k] + " руб.");
             System.out.print("Внесите требуемую сумму:");/*почему в консоли указатель ввода значения встает слева
                                                            от строки, как перенести его в право?*/
-        z = priceCoffee[k];
             while (true) {
                 int price = in.nextInt();
                 if (price == priceCoffee[k]) {
