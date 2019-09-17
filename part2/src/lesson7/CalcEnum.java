@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 class CalcEnum {
     private int count = 1;
+    private int summa;
     void check() {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите номер желаемого напитка: ");
         int sel = in.nextInt() - 1;
-        if (sel <= 4) {
+        if (sel < CoffeeEnum.values().length) {//compared with the amount of parameters in the CoffeeEnum
             System.out.print("Введите сумму: ");
             int cash = in.nextInt();
             System.out.println("Вы выбрали " + CoffeeEnum.values()[sel].getType() + " к оплате " + CoffeeEnum.values()[sel].getPrice());
@@ -26,10 +27,15 @@ class CalcEnum {
                     cash += newCash;
                 }
             }
+            summa += CoffeeEnum.values()[sel].getPrice();
         }else System.out.println("Не правильный ввод");
     }
 
     int getCount() {
         return count;
+    }
+
+    int getSumma() {
+        return summa;
     }
 }
