@@ -6,7 +6,12 @@ public class Main {
         for (CoffeeEnum coffee : CoffeeEnum.values()) {
             System.out.println(coffee.getNum() + ". " + coffee.getType() + ": " + coffee.getPrice());
         }
+        int v = 200; //volume bottel for water in ml
+        int cup = v / 100;//cups of coffee
         CalcEnum metodEnum = new CalcEnum();
-        metodEnum.check();
+        while (cup >= metodEnum.getCount()) {
+            metodEnum.check();
+        }
+        System.out.println("Требуется обслуживание");
     }
 }

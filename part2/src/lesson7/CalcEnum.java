@@ -3,6 +3,7 @@ package lesson7;
 import java.util.Scanner;
 
 class CalcEnum {
+    private int count = 1;
     private String name;
     void check() {
         Scanner in = new Scanner(System.in);
@@ -10,7 +11,7 @@ class CalcEnum {
         int cash = in.nextInt();
         System.out.print("Введите номер желаемого напитка: ");
         int sel = in.nextInt();
-        switch (sel){
+        switch (sel){//Как сделать правильно анализ?
             case 1:
                 name = "CUP";
                 break;
@@ -29,7 +30,7 @@ class CalcEnum {
             default:
                 System.out.println("Не правильный ввод");
                 System.out.println("Возврат средств " + cash);
-                System.exit(0);
+                return;
         }
         System.out.println("Вы выбрали " + CoffeeEnum.valueOf(name).getType() + " к оплате " + CoffeeEnum.valueOf(name).getPrice());
         while (true) {
@@ -38,6 +39,7 @@ class CalcEnum {
                 if (cash > CoffeeEnum.valueOf(name).getPrice()) {
                     System.out.println("Ваша сдача " + (cash - CoffeeEnum.valueOf(name).getPrice()));
                 }
+                count ++;
                 break;
             } else {
                 System.out.print("Недостаточно средств, внесите еще " + (CoffeeEnum.valueOf(name).getPrice() - cash) + ": ");
@@ -45,5 +47,9 @@ class CalcEnum {
                 cash += newCash;
             }
         }
+    }
+
+    int getCount() {
+        return count;
     }
 }
