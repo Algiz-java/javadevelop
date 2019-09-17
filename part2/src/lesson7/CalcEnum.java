@@ -23,6 +23,9 @@ class CalcEnum {
             case 4:
                 name = "MOK";
                 break;
+            case 5:
+                name = "RAF";
+                break;
             default:
                 System.out.println("Не правильный ввод");
                 System.out.println("Возврат средств " + cash);
