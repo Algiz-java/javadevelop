@@ -1,8 +1,8 @@
 package lesson7;
 
 public enum CoffeeEnum {
-         Cup(1,"капучино", 50), Lat(2,"латте", 58),
-         Mok(4,"мокачино", 56) ,Exp(3,"эспрессо", 45);
+    CUP(1,"капучино", 50), LAT(2,"латте", 58),
+    ESP(3,"эспрессо", 45), MOK(4,"мокачино", 56);
 
     private int num;
     private String type;
