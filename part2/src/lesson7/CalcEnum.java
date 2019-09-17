@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 class CalcEnum {
     private int count = 1;
-    private String name;
     void check() {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите сумму: ");
         int cash = in.nextInt();
         System.out.print("Введите номер желаемого напитка: ");
         int sel = in.nextInt();
+        String name;
         switch (sel){//Как сделать правильно анализ?
             case 1:
                 name = "CUP";
