@@ -6,47 +6,27 @@ class CalcEnum {
     private int count = 1;
     void check() {
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите сумму: ");
-        int cash = in.nextInt();
         System.out.print("Введите номер желаемого напитка: ");
-        int sel = in.nextInt();
-        String name;
-        switch (sel){//Как сделать правильно анализ?
-            case 1:
-                name = "CUP";
-                break;
-            case 2:
-                name = "LAT";
-                break;
-            case 3:
-                name = "ESP";
-                break;
-            case 4:
-                name = "MOK";
-                break;
-            case 5:
-                name = "RAF";
-                break;
-            default:
-                System.out.println("Не правильный ввод");
-                System.out.println("Возврат средств " + cash);
-                return;
-        }
-        System.out.println("Вы выбрали " + CoffeeEnum.valueOf(name).getType() + " к оплате " + CoffeeEnum.valueOf(name).getPrice());
-        while (true) {
-            if (cash >= CoffeeEnum.valueOf(name).getPrice()) {
-                System.out.println("Ваш заказ готов");
-                if (cash > CoffeeEnum.valueOf(name).getPrice()) {
-                    System.out.println("Ваша сдача " + (cash - CoffeeEnum.valueOf(name).getPrice()));
+        int sel = in.nextInt() - 1;
+        if (sel <= 4) {
+            System.out.print("Введите сумму: ");
+            int cash = in.nextInt();
+            System.out.println("Вы выбрали " + CoffeeEnum.values()[sel].getType() + " к оплате " + CoffeeEnum.values()[sel].getPrice());
+            while (true) {
+                if (cash >= CoffeeEnum.values()[sel].getPrice()) {
+                    System.out.println("Ваш заказ готов");
+                    if (cash > CoffeeEnum.values()[sel].getPrice()) {
+                        System.out.println("Ваша сдача " + (cash - CoffeeEnum.values()[sel].getPrice()));
+                    }
+                    count++;
+                    break;
+                } else {
+                    System.out.print("Недостаточно средств, внесите еще " + (CoffeeEnum.values()[sel].getPrice() - cash) + ": ");
+                    int newCash = in.nextInt();
+                    cash += newCash;
                 }
-                count ++;
-                break;
-            } else {
-                System.out.print("Недостаточно средств, внесите еще " + (CoffeeEnum.valueOf(name).getPrice() - cash) + ": ");
-                int newCash = in.nextInt();
-                cash += newCash;
             }
-        }
+        }else System.out.println("Не правильный ввод");
     }
 
     int getCount() {
