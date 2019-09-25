@@ -1,4 +1,4 @@
-package lesson9;
+package lesson9.task1;
 
 class Bird extends Animal {
     @Override
