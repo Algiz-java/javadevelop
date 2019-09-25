@@ -1,8 +1,13 @@
 package lesson8.task4;
 
 class Convert {
-    static String convert() {
-        Contract contract = new Contract();
-        return contract.getTovar();
+    static String[] tovar() {
+        return Contract.getTovar();
+    }
+    static String numb(){
+        return Contract.getNumb();
+    }
+    static String date(){
+        return Contract.getDate();
     }
 }

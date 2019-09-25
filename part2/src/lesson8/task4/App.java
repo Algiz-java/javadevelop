@@ -4,8 +4,7 @@ import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
-        Contract contract = new Contract();
-        contract.contract();
-        System.out.println(Convert.convert());
+        Contract.contract();
+        Akt.akt();
     }
 }
