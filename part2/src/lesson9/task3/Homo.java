@@ -8,11 +8,6 @@ abstract class Homo implements Run, Swim {
     }
 
     @Override
-    public void stop() {
-
-    }
-
-    @Override
     public void ocean() {
         System.out.println("I'm swimming in ocean");
     }
