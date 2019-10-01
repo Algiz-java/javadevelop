@@ -1,9 +1,9 @@
 package lesson6;
 
-class Cost {
+class Sklad {
     private Product[] products;
 
-    Cost() {
+    Sklad() {
         products = new Product[5];
         products[0] = new Product("Apple",38.31f,4.5f);
         products[1] = new Product("Orange",80.45f,6.5f);
