@@ -70,13 +70,13 @@ class Library {
             }else {
                 while (true){
                     System.out.print("Введите номер книги которую хотите взять: ");
-                    int sel = in.nextInt();
+                    int sel = in.nextInt() - 1;
                     if (sel <= list.size()){
                         System.out.println("Вы выбрали: " + list.get(sel));
-                        list.remove(sel - 1);
+                        list.remove(sel);
                         break;
                     }else{
-                        System.out.println("Не правильнный ввод, введите цифру от 1 до " + (list.size()+1));
+                        System.out.println("Не правильнный ввод, введите цифру от 1 до " + (list.size()));
                     }
                 }
 
