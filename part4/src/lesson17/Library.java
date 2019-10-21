@@ -6,12 +6,12 @@ import java.util.List;
 import java.util.Scanner;
 
 
-class Books {
+class Library {
     void createBooks() throws IOException {
         File file = new File("file.txt");
         file.createNewFile();
     }
-    void saveBooks() {
+    void automaticlyLibrary() {
         ArrayList<Object> s = new ArrayList<>();
         s.add("Шантарам, автор: Грегори Дэвид Робертс, год издания: 1973");
         s.add("Три товарища, автор: Эрих Мария Ремарк, год издания: 1905");
@@ -35,7 +35,7 @@ class Books {
         }
     }
 
-    void printBooks() {
+    void printLibrary() {
         try (InputStream is = new FileInputStream("file.txt");
              LineNumberReader isr = new LineNumberReader(new InputStreamReader(is))){
             String line;
@@ -48,14 +48,14 @@ class Books {
     }
 
     void addBook() {
-        updateBooksFile(1);
+        updateLibraryFile(1);
     }
 
     void deleteBook() {
-        updateBooksFile(2);
+        updateLibraryFile(2);
     }
 
-    private void updateBooksFile(int j) {
+    private void updateLibraryFile(int j) {
         Scanner in  = new Scanner(System.in);
         try (InputStream is = new FileInputStream("file.txt");
              LineNumberReader isr = new LineNumberReader(new InputStreamReader(is))){

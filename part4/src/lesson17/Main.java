@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(System.in);
-        Books books = new Books();
+        Library library = new Library();
         File file = new File("file.txt");
         if (!file.exists()){
             System.out.println("Библиотека пуста :(");
@@ -15,11 +15,11 @@ public class Main {
                         + "\n" + "2 - Добавить книгу в ручную" + "\n" + "3 - Выйти из программы" + "\n");
                 switch (in.nextInt()) {
                     case 1:
-                        books.saveBooks();
+                        library.automaticlyLibrary();
                         break;
                     case 2:
-                        books.createBooks();
-                        books.addBook();
+                        library.createBooks();
+                        library.addBook();
                         break;
                     case 3:
                         System.exit(0);
@@ -32,13 +32,13 @@ public class Main {
                     + "\n" + "3 - Взять книгу" + "\n" + "4 - Выйти из программы" + "\n");
             switch (in.nextInt()) {
                 case 1:
-                    books.printBooks();
+                    library.printLibrary();
                     break;
                 case 2:
-                    books.addBook();
+                    library.addBook();
                     break;
                 case 3:
-                    books.deleteBook();
+                    library.deleteBook();
                     break;
                 case 4:
                     System.exit(0);
