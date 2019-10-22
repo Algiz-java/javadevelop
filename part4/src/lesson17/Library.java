@@ -71,7 +71,7 @@ class Library {
                 while (true){
                     System.out.print("Введите номер книги которую хотите взять: ");
                     int sel = in.nextInt() - 1;
-                    if (sel <= list.size()){
+                    if (sel <= list.size() & sel >= 0){
                         System.out.println("Вы выбрали: " + list.get(sel));
                         list.remove(sel);
                         break;
