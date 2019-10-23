@@ -1,17 +1,20 @@
 package lesson8.task4;
 
-class Contract {
-
+class Act {
     private String numb;
     private String date;
-    private String[] tovar = {"Автомобиль", "Квартира"};
+    private String[] tovar;
 
-    void setNumb() {
-        this.numb = "123/4";
+    void setNumb(String numb) {
+        this.numb = numb;
     }
 
-    void setDate() {
-        this.date = "24.10.2019";
+    void setDate(String date) {
+        this.date = date;
+    }
+
+    void setTovar(String[] tovar) {
+        this.tovar = tovar;
     }
 
     String getNumb() {
