@@ -1,6 +1,6 @@
 package lesson6;
 
-public class TradePrice {
+class TradePrice {
 
     float getApplePrice() {
         return 48.2f;
