@@ -1,15 +1,17 @@
 package lesson6;
 
-class Sklad {
+class Stock {
     private Product[] products;
 
-    Sklad() {
+    Stock() {
         products = new Product[5];
-        products[0] = new Product("Apple",38.31f,4.5f);
-        products[1] = new Product("Orange",80.45f,6.5f);
-        products[2] = new Product("Tomato",60.82f,10.4f);
-        products[3] = new Product("Beer",41.34f,40f);
-        products[4] = new Product("Milk",62.38f,20f);
+        TradePrice tradePrice = new TradePrice();
+        float percent = 1.2f;
+        products[0] = new Product("Apple", tradePrice.getApplePrice() * percent,4.5f);
+        products[1] = new Product("Orange", tradePrice.getOrangePrice() * percent,6.5f);
+        products[2] = new Product("Tomato",tradePrice.getTomatoPrice() * percent,10.4f);
+        products[3] = new Product("Beer",tradePrice.getBeerPrice() * percent,40f);
+        products[4] = new Product("Milk",tradePrice.getMilkPrice() * percent,20f);
     }
     float sumOfCost() {
         float sum = 0;

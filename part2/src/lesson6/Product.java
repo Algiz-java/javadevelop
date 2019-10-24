@@ -1,6 +1,5 @@
 package lesson6;
 
-
 class Product {
     float price;
     float value;
