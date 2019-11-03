@@ -24,15 +24,15 @@ public class Fibonachi {
 
     //Метод итерации, способ 1
     private static void iteration(int n) {
-        long n0 = 0;
-        long n1 = 1;
-        long n2;
-        System.out.print(n0 + " " + n1 + " ");
+        long x = 0;
+        long y = 1;
+        long z;
+        System.out.print(x + " " + y + " ");
         for (int i = 3; i <= n; i++) {
-            n2 = n0 + n1;
-            System.out.print(n2 + " ");
-            n0 = n1;
-            n1 = n2;
+            z = x + y;
+            System.out.print(z + " ");
+            x = y;
+            y = z;
         }
     }
 
