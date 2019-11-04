@@ -24,9 +24,7 @@ public class Fibonachi {
 
     //Метод итерации, способ 1
     private static void iteration(int n) {
-        long x = 0;
-        long y = 1;
-        long z;
+        long x = 0, y = 1, z;
         System.out.print(x + " " + y + " ");
         for (int i = 3; i <= n; i++) {
             z = x + y;
