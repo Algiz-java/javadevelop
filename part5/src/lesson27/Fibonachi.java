@@ -12,8 +12,13 @@ public class Fibonachi {
 
         //Вывод на консоль результатов метода итерации
         System.out.println("Метод итерации:");
-        iteration(n);
-        System.out.print("\n" + Arrays.toString(iterationArray(n)) + " ");//Как вывести красиво на консоль без скобок?
+        iteration(n);//способо 1
+        System.out.println();
+        long[] longs = iterationArray(n);//способ 2
+        for (long aLong : longs) {
+            System.out.print(aLong + " ");
+
+        }
 
         //Вывод на консоль результатов метода рекурсии
         System.out.println("\n" + "Метод рекурсии:");
