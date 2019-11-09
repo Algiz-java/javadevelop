@@ -1,9 +1,11 @@
 package lesson27;
 
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Fibonachi {
+
+    private static HashMap<Integer, Long> results = new HashMap<>();
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -52,13 +54,14 @@ public class Fibonachi {
 
     //Метод рекурсии
     private static long recursion(int n) {
-        int[] recurs = new int[n + 1];
-        if (n == 0) {
-            return recurs[0] = 0;
-        }
-        if (n == 1) {
-            return recurs[1] = 1;
-        }
-        return recurs[n] = (int) (recursion(n - 1) + recursion(n - 2));
+        return results.computeIfAbsent(n, (i) -> {
+            if (i == 0) {
+                return 0L;
+            }
+            if (i == 1) {
+                return 1L;
+            }
+            return recursion(i - 1) + recursion(i - 2);
+        });
     }
 }
