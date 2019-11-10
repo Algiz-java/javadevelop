@@ -15,14 +15,12 @@ public class PersonHashMap {
         Person person2 = new Person(34, "Сидорова", "жен");
         Person person3 = new Person(34, "Тихонова", "жен");
         Person person4 = new Person(35, "Петров", "муж");
-        Person person5 = new Person(30, "Петров", "муж");
         book.put("Key1", person1);
         book.put("Key2", person1);
         book.put("Key3", person2);
         book.put("Key4", person3);
         book.put("Key5", person4);
         book.put("Key6", person4);
-        book.put("Key7", person5);
         return book;
     }
 
