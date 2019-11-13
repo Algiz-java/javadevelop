@@ -46,6 +46,7 @@ public class PersonHashMap {
         for (Map.Entry<String, Person> pair : copy.entrySet()) {
             if (pair.getValue().equals(value)) {
                 map.remove(pair.getKey());
+                break;
             }
         }
     }
