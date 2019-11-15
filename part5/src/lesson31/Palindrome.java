@@ -13,6 +13,7 @@ public class Palindrome {
         System.out.print("It's palindrome? - " + chrString(str));
     }
 
+    //как корректно вывести результат этих методов и допустимо ли это вообще?
     private static boolean chrString(String str) {
         char[] chars = str.toCharArray();
         char[] reverseStr = new char[chars.length];
